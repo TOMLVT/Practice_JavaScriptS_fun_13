@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Slider - Tom</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+        .slider {
+            margin: 0 auto;
+            width: 80%;
+        }
+        .slider .slick-slide {
+            height: 300px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+        }
+        .control-buttons {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           margin-top: 1rem;
+           gap: 1rem;
+        }
+        .control-buttons button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        #prev {
+            left: -50px;
+        }
+        #next {
+            right: -50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slider single-item">
+    <div><h3>Slide 1</h3></div>
+    <div><h3>Slide 2</h3></div>
+    <div><h3>Slide 3</h3></div>
+    <div><h3>Slide 4</h3></div>
+</div>
+
+<div class="control-buttons">
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.single-item').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            prevArrow: $('#prev'),
+            nextArrow: $('#next')
+        });
+    });
+</script>
+
+</body>
+</html>
